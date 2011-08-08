@@ -1,0 +1,31 @@
+<html><head>
+
+<script type="text/javascript">
+var sendform = function(){
+    var mail = "mailto:" + document.getElementById("mailselect").value;
+    document.getElementById("hysform").action = mail;
+
+ return true;
+}
+</script>
+
+</head>
+
+<body>
+A form for hy:
+<form id="hysform" method="post" 
+   action="mailto:hy@hy.com" 
+     enctype="text/plain">
+<input type=text 
+   name=your_text>
+   <select id="mailselect">
+  <option value="alfa@alfa.com">alfa@alfa.com</option>
+  <option value="beta@beta.com">beta@beta.com</option>
+
+</select>
+<input type=submit 
+   value="Submit" onclick="sendform()">
+</form>
+
+</body>
+</html>
